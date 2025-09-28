@@ -5,13 +5,14 @@ import ErrorBoundary from "components/ErrorBoundary";
 import PrivateRoute from "components/PrivateRoute";
 
 // Import pages
-import Home from './pages/Home';
-import Features from './pages/Features';
-import Auth from './pages/Auth';
-import FarmerDashboard from './pages/FarmerDashboard';
-import BusinessDashboard from './pages/BusinessDashboard';
-import Chat from './pages/Chat';
-import Contact from './pages/Contact';
+import Home from "./pages/Home";
+import Features from "./pages/Features";
+import Auth from "./pages/Auth";
+import FarmerDashboard from "./pages/FarmerDashboard";
+import BusinessDashboard from "./pages/BusinessDashboard";
+import Chat from "./pages/Chat";
+import AIChatAssistant from "./pages/ai-chat-assistant";
+import Contact from "./pages/Contact";
 import NotFound from "pages/NotFound";
 
 const Routes = () => {
@@ -25,20 +26,27 @@ const Routes = () => {
           <Route path="/features" element={<Features />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/ai-chat" element={<AIChatAssistant />} />
           <Route path="/contact" element={<Contact />} />
-          
+
           {/* Protected Routes */}
-          <Route path="/dashboard/farmer" element={
-            <PrivateRoute>
-              <FarmerDashboard />
-            </PrivateRoute>
-          } />
-          <Route path="/dashboard/business" element={
-            <PrivateRoute>
-              <BusinessDashboard />
-            </PrivateRoute>
-          } />
-          
+          <Route
+            path="/dashboard/farmer"
+            element={
+              <PrivateRoute>
+                <FarmerDashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/business"
+            element={
+              <PrivateRoute>
+                <BusinessDashboard />
+              </PrivateRoute>
+            }
+          />
+
           {/* 404 Route */}
           <Route path="*" element={<NotFound />} />
         </RouterRoutes>
