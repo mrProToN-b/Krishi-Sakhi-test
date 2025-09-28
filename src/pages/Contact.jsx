@@ -516,140 +516,142 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="bg-white p-8 rounded-lg shadow-soft border border-gray-200">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
+              <div className="mt-4">
+                <div className="mt-12 bg-white p-8 rounded-lg shadow-soft border border-gray-200">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
 
-                {/* Success Message */}
-                {isSubmitted && (
-                  <motion.div
-                    className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                  >
-                    <p className="text-green-800 font-medium">
-                      Thank you! Your message has been sent successfully. We'll get back to you soon.
-                    </p>
-                  </motion.div>
-                )}
-
-                {/* Contact Form */}
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name and Email Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData?.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                        placeholder="Enter your full name"
-                      />
-                      {errors?.name && (
-                        <p className="mt-1 text-sm text-red-600">{errors?.name}</p>
-                      )}
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData?.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                        placeholder="Enter your email"
-                      />
-                      {errors?.email && (
-                        <p className="mt-1 text-sm text-red-600">{errors?.email}</p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Phone and Subject Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData?.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                        Subject
-                      </label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        value={formData?.subject}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                      >
-                        <option value="">Select a subject</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="technical">Technical Support</option>
-                        <option value="partnership">Partnership</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData?.message}
-                      onChange={handleChange}
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-vertical"
-                      placeholder="Tell us how we can help you..."
-                    />
-                    {errors?.message && (
-                      <p className="mt-1 text-sm text-red-600">{errors?.message}</p>
-                    )}
-                  </div>
-
-                  {/* General Error */}
-                  {errors?.general && (
-                    <div className="text-center">
-                      <p className="text-sm text-red-600">{errors?.general}</p>
-                    </div>
+                  {/* Success Message */}
+                  {isSubmitted && (
+                    <motion.div
+                      className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                    >
+                      <p className="text-green-800 font-medium">
+                        Thank you! Your message has been sent successfully. We'll get back to you soon.
+                      </p>
+                    </motion.div>
                   )}
 
-                  {/* Submit Button */}
-                  <motion.button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${isSubmitting
-                      ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-600 hover:bg-green-700 text-white'
-                      }`}
-                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </motion.button>
-                </form>
+                  {/* Contact Form */}
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Name and Email Row */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData?.name}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          placeholder="Enter your full name"
+                        />
+                        {errors?.name && (
+                          <p className="mt-1 text-sm text-red-600">{errors?.name}</p>
+                        )}
+                      </div>
+
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData?.email}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          placeholder="Enter your email"
+                        />
+                        {errors?.email && (
+                          <p className="mt-1 text-sm text-red-600">{errors?.email}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Phone and Subject Row */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData?.phone}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          placeholder="Enter your phone number"
+                        />
+                      </div>
+
+                      <div>
+                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                          Subject
+                        </label>
+                        <select
+                          id="subject"
+                          name="subject"
+                          value={formData?.subject}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        >
+                          <option value="">Select a subject</option>
+                          <option value="general">General Inquiry</option>
+                          <option value="technical">Technical Support</option>
+                          <option value="partnership">Partnership</option>
+                          <option value="feedback">Feedback</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    {/* Message */}
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData?.message}
+                        onChange={handleChange}
+                        rows={6}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-vertical"
+                        placeholder="Tell us how we can help you..."
+                      />
+                      {errors?.message && (
+                        <p className="mt-1 text-sm text-red-600">{errors?.message}</p>
+                      )}
+                    </div>
+
+                    {/* General Error */}
+                    {errors?.general && (
+                      <div className="text-center">
+                        <p className="text-sm text-red-600">{errors?.general}</p>
+                      </div>
+                    )}
+
+                    {/* Submit Button */}
+                    <motion.button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${isSubmitting
+                        ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-600 hover:bg-green-700 text-white'
+                        }`}
+                      whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                      whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </motion.button>
+                  </form>
+                </div>
               </div>
             </motion.div>
           </div>
