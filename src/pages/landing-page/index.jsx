@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import PublicHeaderNav from "../../components/ui/PublicHeaderNav";
-import AuthenticationModal from "../../components/ui/AuthenticationModal";
-import SimpleFloatingChatbot from "../../components/ui/SimpleFloatingChatbot";
-import HeroSection from "./components/HeroSection";
-import FeaturesPreview from "./components/FeaturesPreview";
-import StatsSection from "./components/StatsSection";
-import TestimonialsSection from "./components/TestimonialsSection";
-import CTASection from "./components/CTASection";
-import Icon from "../../components/AppIcon";
+import PublicHeaderNav from '../../components/ui/PublicHeaderNav';
+import AuthenticationModal from '../../components/ui/AuthenticationModal';
+import FloatingAIAssistant from '../../components/ui/FloatingAIAssistant';
+import HeroSection from './components/HeroSection';
+import FeaturesPreview from './components/FeaturesPreview';
+import StatsSection from './components/StatsSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import CTASection from './components/CTASection';
+import Icon from '../../components/AppIcon';
 
 const LandingPage = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState("farmer");
+  const [authMode, setAuthMode] = useState('farmer');
   const [isAIAssistantOpen, setIsAIAssistantOpen] = useState(false);
 
-  const handleOpenAuth = (userType = "farmer") => {
+  const handleOpenAuth = (userType = 'farmer') => {
     setAuthMode(userType);
     setIsAuthModalOpen(true);
   };
@@ -25,13 +25,13 @@ const LandingPage = () => {
   };
 
   const handleAuthenticate = (authData) => {
-    console.log("Authentication successful:", authData);
+    console.log('Authentication successful:', authData);
     // Handle successful authentication
     // Redirect to appropriate dashboard based on user role
-    if (authData?.user?.role === "farmer") {
-      window.location.href = "/farmer-dashboard";
+    if (authData?.user?.role === 'farmer') {
+      window.location.href = '/farmer-dashboard';
     } else {
-      window.location.href = "/business-owner-dashboard";
+      window.location.href = '/business-owner-dashboard';
     }
   };
 
@@ -75,76 +75,31 @@ const LandingPage = () => {
                 </span>
               </div>
               <p className="text-muted-foreground mb-4 max-w-md">
-                Empowering farmers and agricultural businesses with AI-powered
-                insights, weather alerts, and smart farming solutions across
-                Kerala.
+                Empowering farmers and agricultural businesses with AI-powered insights, 
+                weather alerts, and smart farming solutions across Kerala.
               </p>
               <div className="flex space-x-4">
-                <Icon
-                  name="Facebook"
-                  size={20}
-                  className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-                />
-                <Icon
-                  name="Twitter"
-                  size={20}
-                  className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-                />
-                <Icon
-                  name="Instagram"
-                  size={20}
-                  className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-                />
-                <Icon
-                  name="Youtube"
-                  size={20}
-                  className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-                />
+                <Icon name="Facebook" size={20} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+                <Icon name="Twitter" size={20} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+                <Icon name="Instagram" size={20} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+                <Icon name="Youtube" size={20} className="text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-heading font-semibold text-foreground mb-4">
-                Quick Links
-              </h3>
+              <h3 className="font-heading font-semibold text-foreground mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li>
-                  <a
-                    href="/features-overview"
-                    className="text-muted-foreground hover:text-primary transition-colors">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/ai-chat-assistant"
-                    className="text-muted-foreground hover:text-primary transition-colors">
-                    AI Assistant
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-primary transition-colors">
-                    Support
-                  </a>
-                </li>
+                <li><a href="/features-overview" className="text-muted-foreground hover:text-primary transition-colors">Features</a></li>
+                <li><a href="/ai-chat-assistant" className="text-muted-foreground hover:text-primary transition-colors">AI Assistant</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Support</a></li>
               </ul>
             </div>
 
             {/* Contact */}
             <div>
-              <h3 className="font-heading font-semibold text-foreground mb-4">
-                Contact
-              </h3>
+              <h3 className="font-heading font-semibold text-foreground mb-4">Contact</h3>
               <ul className="space-y-2">
                 <li className="flex items-center space-x-2 text-muted-foreground">
                   <Icon name="Mail" size={16} />
@@ -168,21 +123,9 @@ const LandingPage = () => {
               © {new Date()?.getFullYear()} Krishi Sakhi. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 sm:mt-0">
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-primary text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-primary text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-primary text-sm transition-colors">
-                Cookie Policy
-              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Privacy Policy</a>
+              <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Terms of Service</a>
+              <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>
@@ -192,11 +135,11 @@ const LandingPage = () => {
         isOpen={isAuthModalOpen}
         onClose={handleCloseAuth}
         onAuthenticate={handleAuthenticate}
-        initialMode={authMode === "farmer" ? "signup" : "signup"}
+        initialMode={authMode === 'farmer' ? 'signup' : 'signup'}
         initialRole={authMode}
       />
-      {/* Simple Floating AI Assistant */}
-      <SimpleFloatingChatbot
+      {/* Floating AI Assistant */}
+      <FloatingAIAssistant
         isOpen={isAIAssistantOpen}
         onToggle={toggleAIAssistant}
       />

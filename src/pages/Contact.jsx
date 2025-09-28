@@ -116,7 +116,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
+
       <main className="pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header */}
@@ -168,7 +168,7 @@ const Contact = () => {
                 className="bg-green-50 p-6 rounded-lg border border-green-200"
                 whileHover={{ scale: 1.02 }}
               >
-                <h3 className="font-semibold flex text-green-800 mb-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-clock-icon lucide-file-clock"><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" /><path d="M8 14v2.2l1.6 1" /><circle cx="8" cy="16" r="6" /></svg> <span class = "ml-4">Office Hours</span></h3>
+                <h3 className="font-semibold flex text-green-800 mb-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-clock-icon lucide-file-clock"><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3" /><path d="M8 14v2.2l1.6 1" /><circle cx="8" cy="16" r="6" /></svg> <span class="ml-4">Office Hours</span></h3>
                 <div className="space-y-1  text-sm text-green-700">
                   <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p>Saturday: 9:00 AM - 1:00 PM</p>
@@ -323,7 +323,7 @@ const Contact = () => {
           </div>
         </div>
       </main>
-      <Footer />
+
     </div>
   );
 };

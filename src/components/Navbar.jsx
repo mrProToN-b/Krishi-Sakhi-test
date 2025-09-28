@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="sticky top-0 z-50 bg-white shadow-soft border-b border-gray-200"
+      className="sticky top-0 z-50 bg-green-400 shadow-soft border-b border-gray-200"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
@@ -32,20 +32,20 @@ const Navbar = () => {
             {/* <div className="">
               <span className="text-white font-bold text-xl">🌱</span>
             </div> */}
-            <span className="font-bold text-xl text-gray-900">Krishi Sakhi</span>
+            <span className="font-bold text-xl text-black-900">Krishi Sakhi</span>
           </Link>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-black-900 hover:text-green-600 transition-colors"
             >
               Home
             </Link>
             <Link
               to="/features"
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-black-900 hover:text-green-600 transition-colors"
             >
               Features
             </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
             </Link> */}
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-black-900 hover:text-green-600 transition-colors"
             >
               Contact
             </Link>
@@ -83,9 +83,9 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/auth"
-                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
+                className="bg-yellow-500 text-black-900 px-4 py-2 rounded-md hover:bg-green-700 transition-colors"
               >
-                Login/Register
+                Login
               </Link>
             )}
           </div>
