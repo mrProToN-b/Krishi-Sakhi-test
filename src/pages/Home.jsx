@@ -134,7 +134,7 @@ const Home = () => {
         >
           {heroImages.map((img, index) => (
             <SwiperSlide key={index}>
-              <img src={img} alt={`slide-${index}`} className="w-full h-[700px] object-cover" />
+              <img src={img} alt={`slide-${index}`} className="w-full h-[300px] object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>
