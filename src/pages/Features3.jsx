@@ -60,7 +60,7 @@ const Features3 = () => {
     }
 
     return (
-        <div className=" bg-gray-200">
+        <div className=" bg-gray-50">
             {/* Navigation */}
 
             {/* Features Content */}
