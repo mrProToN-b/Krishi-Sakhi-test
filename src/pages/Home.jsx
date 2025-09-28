@@ -130,7 +130,7 @@ const Home = () => {
           slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          className="w-full"
+          className="w-full h-[300px]"
         >
           {heroImages.map((img, index) => (
             <SwiperSlide key={index}>
