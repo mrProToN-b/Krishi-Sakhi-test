@@ -39,25 +39,25 @@
 //           <div className="hidden md:flex items-center space-x-8">
 //             <Link
 //               to="/"
-//               className="text-black-900 hover:text-green-600 transition-colors"
+//               className="text-black-900 hover:text-ks-hover transition-colors"
 //             >
 //               Home
 //             </Link>
 //             <Link
 //               to="/features"
-//               className="text-black-900 hover:text-green-600 transition-colors"
+//               className="text-black-900 hover:text-ks-hover transition-colors"
 //             >
 //               Features
 //             </Link>
 //             {/* <Link
 //               to="/chat"
-//               className="text-gray-700 hover:text-green-600 transition-colors"
+//               className="text-gray-700 hover:text-ks-hover transition-colors"
 //             >
 //               AI Chat
 //             </Link> */}
 //             <Link
 //               to="/contact"
-//               className="text-black-900 hover:text-green-600 transition-colors"
+//               className="text-black-900 hover:text-ks-hover transition-colors"
 //             >
 //               Contact
 //             </Link>
@@ -118,7 +118,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="sticky top-0 z-50 bg-green-400 shadow-soft border-b border-gray-200"
+      className="sticky top-0 z-50 bg-ks-bg shadow-soft border-b border-gray-200"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
@@ -145,7 +145,7 @@ const Navbar = () => {
               offset={-100}
               spy={true}
               activeClass="active-link"
-              className="cursor-pointer text-black-900 hover:text-green-600 transition-colors"
+              className=" no-underline cursor-pointer text-black-900 hover:text-ks-hover transition-colors"
             >
               Home
             </ScrollLink>
@@ -157,7 +157,7 @@ const Navbar = () => {
               offset={-100}
               spy={true}
               activeClass="active-link"
-              className="cursor-pointer text-black-900 hover:text-green-600 transition-colors"
+              className=" no-underline cursor-pointer text-black-900 hover:text-ks-hover transition-colors"
             >
               Features
             </ScrollLink>
@@ -169,7 +169,7 @@ const Navbar = () => {
               offset={-100}
               spy={true}
               activeClass="active-link"
-              className="cursor-pointer text-black-900 hover:text-green-600 transition-colors"
+              className=" no-underline cursor-pointer text-black-900 hover:text-ks-hover transition-colors"
             >
               Contact
             </ScrollLink>

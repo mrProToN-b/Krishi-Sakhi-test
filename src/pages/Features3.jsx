@@ -168,7 +168,7 @@ const Features3 = () => {
     }
 
     return (
-        <div className=" bg-gray-200">
+        <div className=" bg-landing-bg">
             {/* Navigation */}
 
             {/* Features Content */}
@@ -205,7 +205,11 @@ const Features3 = () => {
                     </div>
 
 
+
+                    
                 </div>
+
+
             </main>
 
         </div>

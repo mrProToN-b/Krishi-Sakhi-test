@@ -104,6 +104,7 @@ import Navbar from '../components/Navbar';
 import Features2 from './Features2';
 import Features3 from './Features3';
 import Contact from './Contact';
+import Footer from '../components/Footer';
 
 import slide1 from '../assets/slide1.png';
 import slide2 from '../assets/slide2.jpg';
@@ -150,7 +151,9 @@ const Home = () => {
       <div id="contact" className="min-h-screen">
         <Contact />
       </div>
+      <Footer/>
     </div>
+      
   );
 };
 

@@ -24,6 +24,10 @@ export default {
         'mono': ['JetBrains Mono', 'monospace'],
       },
       colors: {
+        "ks-bg": "#16A34A",   // nav panel background (very light greenish)
+        "ks-text":  "#065F46",  // text (deep green)
+        "ks-hover": "#D1FAE5",
+        "landing-bg": "#f9fafb",
         border: "var(--color-border)", /* gray-200 */
         input: "var(--color-input)", /* white */
         ring: "var(--color-ring)", /* primary */
