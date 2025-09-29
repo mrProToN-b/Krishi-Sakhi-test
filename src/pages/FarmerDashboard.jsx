@@ -101,7 +101,7 @@ const FarmerDashboard = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Welcome back, {userName}! 👋
+            Welcome back, {userName}!
           </h1>
           <p className="text-gray-600">
             Here's what's happening on your farm today.
